@@ -1,0 +1,18 @@
+{
+  "run_id": "run_20261110T140001Z_3f9a1c",
+  "process": "harness_loan",
+  "masked": false,
+  "steps": [
+    {"seq": 1, "app": "app1", "screen": "search",       "action": "type",  "field": "name",    "value": "JOHN SMITH"},
+    {"seq": 2, "app": "app1", "screen": "results",      "action": "click", "field": "row:1"},
+    {"seq": 3, "app": "app1", "screen": "customer",     "action": "read",  "field": "acctNo",  "value": "0048812231"},
+    {"seq": 4, "app": "app2", "screen": "search",       "action": "type",  "field": "acct",    "value": "0048812231"},
+    {"seq": 5, "app": "app2", "screen": "customer",     "action": "click", "field": "newLoan"},
+    {"seq": 6, "app": "app2", "screen": "loan_new",     "action": "type",  "field": "loanAmt", "value": "12500"},
+    {"seq": 7, "app": "app2", "screen": "loan_new",     "action": "type",  "field": "term",    "value": "36"},
+    {"seq": 8, "app": "app2", "screen": "loan_new",     "action": "type",  "field": "purpose", "value": "AUTO"},
+    {"seq": 9, "app": "app2", "screen": "loan_new",     "action": "type",  "field": "ssn",     "value": null, "redacted": true},
+    {"seq": 10,"app": "app2", "screen": "loan_new",     "action": "click", "field": "submit"},
+    {"seq": 11,"app": "app2", "screen": "loan_confirm", "action": "read",  "field": "loanNo",  "value": "*generated*"}
+  ]
+}
